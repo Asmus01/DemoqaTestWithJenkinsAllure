@@ -4,14 +4,17 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.javafaker.Faker;
 import helpers.Attach;
+import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.HashMap;
 
+import static io.qameta.allure.SeverityLevel.CRITICAL;
 import static randomData.randomDataForStateCity.generatorOfCity;
 
 public class TestBase {
@@ -53,6 +56,13 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
 
     }
+
+    @Description("Test of Demoqa Registration Page")
+    @Severity(CRITICAL)
+    @Owner("Aslan")
+    @Link(name = "Demoqa Registration Page", url = "https://demoqa.com/automation-practice-form")
+    @DisplayName("DEMOQA")
+    @Story("Проверка формы регистрации")
 
     @BeforeEach
     void addListenerAllure() {
