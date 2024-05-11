@@ -25,8 +25,8 @@ public class TestDemoqaFormRegistration extends TestBase {
     @Severity(CRITICAL)
     @Owner("Aslan")
     @Link(name = "Demoqa Registration Page", url = "https://demoqa.com/automation-practice-form")
-    @DisplayName("DEMOQA")
-    @Story("Проверка формы регистрации")
+    @DisplayName("Проверка формы регистрации")
+    @Story("Проверка")
     void demoqaRegistrationForm() {
 
         testPageDemoqa.openPage()
