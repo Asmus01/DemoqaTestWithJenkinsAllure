@@ -57,12 +57,7 @@ public class TestBase {
 
     }
 
-    @Description("Test of Demoqa Registration Page")
-    @Severity(CRITICAL)
-    @Owner("Aslan")
-    @Link(name = "Demoqa Registration Page", url = "https://demoqa.com/automation-practice-form")
-    @DisplayName("DEMOQA")
-    @Story("Проверка формы регистрации")
+
 
     @BeforeEach
     void addListenerAllure() {
