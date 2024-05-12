@@ -45,6 +45,7 @@ public class TestBase {
        Configuration.browser = "chrome";
        Configuration.browserVersion = "100.0";
        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+       Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
