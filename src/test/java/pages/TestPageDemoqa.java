@@ -20,7 +20,7 @@ public class TestPageDemoqa {
 
     public TestPageDemoqa openPage() {
         step("Открытие страницы", () -> {
-            open("https://demoqa.com/automation-practice-form");
+            open("/automation-practice-form");
             $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
             Selenide.executeJavaScript("$('#RightSide_Advertisement').remove()");//delete ads-banners
             Selenide.executeJavaScript("$('footer').remove()");//delete footer

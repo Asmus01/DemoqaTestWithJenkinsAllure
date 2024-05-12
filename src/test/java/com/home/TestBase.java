@@ -39,12 +39,16 @@ public class TestBase {
     public String city = generatorOfCity(state);
 
 
+
+
     @BeforeAll
     static void setUp() {
 
        Configuration.browser = "chrome";
        Configuration.browserVersion = "100.0";
-       Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+       Configuration.remote = System.getProperty("browser_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+       Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
+       //"https://user1:1234@selenoid.autotests.cloud/wd/hub"
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 

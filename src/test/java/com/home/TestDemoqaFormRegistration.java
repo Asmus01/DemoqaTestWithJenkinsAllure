@@ -21,6 +21,7 @@ public class TestDemoqaFormRegistration extends TestBase {
     @Test
     @Tag("remote")
 
+
     @Description("Test of Demoqa Registration Page")
     @Severity(CRITICAL)
     @Owner("Aslan")
