@@ -41,7 +41,19 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform{}
+    useJUnitPlatform {}
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
 
 
@@ -49,4 +61,20 @@ task remote_test(type: Test) {
     useJUnitPlatform {
         includeTags("remote")
     }
+task one_test(type: Test) {
+        useJUnitPlatform {
+            includeTags("one_property")
+    }
+task hello_test_test(type: Test) {
+            useJUnitPlatform {
+                includeTags("hello_test")
+    }
+task twice_test(type: Test) {
+                useJUnitPlatform {
+                    includeTags("one_property", "hello_test")
+
+                }
+            }
+    }
+  }
 }

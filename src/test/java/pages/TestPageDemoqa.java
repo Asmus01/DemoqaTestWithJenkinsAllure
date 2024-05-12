@@ -31,34 +31,46 @@ public class TestPageDemoqa {
     }
 
     public TestPageDemoqa setFirstName(String value) {
+        step("Ввод имени", () -> {
         firstNameInput.setValue(value);
+        });
         return this;
     }
 
     public TestPageDemoqa setLastName(String value) {
+        step("Ввод фамилии", () -> {
         lastNameInput.setValue(value);
+    });
         return this;
 
     }
 
     public TestPageDemoqa setEmail(String value) {
+        step("Ввод email", () -> {
         $("#userEmail").setValue(value);
+        });
         return this;
     }
 
     public TestPageDemoqa setGender(String value) {
+        step("Выбор пола", () -> {
         $("#genterWrapper").$(byText(value)).click();
+    });
         return this;
     }
 
     public TestPageDemoqa setMobile(String value) {
+        step("Ввод мобильного номера", () -> {
         $("#userNumber").setValue(value);
+        });
         return this;
     }
 
     public TestPageDemoqa setBirthDay(String day, String month, String year) {
+        step("Ввод даты рождения", () -> {
         $("#dateOfBirthInput").click();
         calendarComponent.setDayOfBirth(day, month, year);
+    });
         return this;
 
     }
