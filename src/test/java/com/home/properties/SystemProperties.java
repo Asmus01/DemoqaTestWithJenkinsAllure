@@ -42,6 +42,7 @@ public class SystemProperties {
     gradle clean twice_test                         // запускаем два теста
     gradle clean remote_test "-Dbrowser_url=https://user1:1234@selenoid.autotests.cloud/wd/hub"
     gradle clean remote_test "-Dbrowser_type=opera"
+    gradle clean remote_test "-Dbrowser_version=106.0"
 
 
 
