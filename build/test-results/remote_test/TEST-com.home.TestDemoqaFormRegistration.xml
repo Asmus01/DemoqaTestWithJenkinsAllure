@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.home.TestDemoqaFormRegistration" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-05-13T12:57:28" hostname="HOME-PC" time="0.128">
+<testsuite name="com.home.TestDemoqaFormRegistration" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-05-13T12:59:36" hostname="HOME-PC" time="0.129">
   <properties/>
-  <testcase name="Проверка формы регистрации" classname="com.home.TestDemoqaFormRegistration" time="0.128">
+  <testcase name="Проверка формы регистрации" classname="com.home.TestDemoqaFormRegistration" time="0.129">
     <failure message="java.lang.IllegalArgumentException: Class not found: opera" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Class not found: opera
 	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:75)
 	at com.codeborne.selenide.webdriver.DefaultDriverFactory.createCapabilities(DefaultDriverFactory.java:60)
