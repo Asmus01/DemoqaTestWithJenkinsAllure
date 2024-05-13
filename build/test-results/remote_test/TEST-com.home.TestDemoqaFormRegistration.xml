@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.home.TestDemoqaFormRegistration" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-05-13T12:57:28" hostname="HOME-PC" time="0.128">
+  <properties/>
+  <testcase name="Проверка формы регистрации" classname="com.home.TestDemoqaFormRegistration" time="0.128">
+    <failure message="java.lang.IllegalArgumentException: Class not found: opera" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Class not found: opera
+	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:75)
+	at com.codeborne.selenide.webdriver.DefaultDriverFactory.createCapabilities(DefaultDriverFactory.java:60)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:113)
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113)
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52)
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:202)
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:186)
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:155)
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130)
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65)
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:220)
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:71)
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105)
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133)
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104)
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:69)
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32)
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101)
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53)
+	at pages.TestPageDemoqa.lambda$openPage$0(TestPageDemoqa.java:23)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at pages.TestPageDemoqa.openPage(TestPageDemoqa.java:22)
+	at com.home.TestDemoqaFormRegistration.demoqaRegistrationForm(TestDemoqaFormRegistration.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.IllegalStateException: No webdriver is bound to current thread: 1. You need to call open(url) first.
+		at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.lambda$getWebDriver$1(WebDriverThreadLocalContainer.java:144)
+		at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+		at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getWebDriver(WebDriverThreadLocalContainer.java:143)
+		at com.codeborne.selenide.WebDriverRunner.getWebDriver(WebDriverRunner.java:112)
+		at helpers.Attach.screenshotAs(Attach.java:19)
+		at com.home.TestBase.addAttachments(TestBase.java:72)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at io.qameta.allure.junit5.AllureJunit5.processFixture(AllureJunit5.java:138)
+		at io.qameta.allure.junit5.AllureJunit5.interceptAfterEachMethod(AllureJunit5.java:124)
+		... 2 more
+Caused by: java.lang.ClassNotFoundException: opera
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at com.codeborne.selenide.webdriver.DefaultDriverFactory.classOf(DefaultDriverFactory.java:72)
+	... 32 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+]]></system-err>
+</testsuite>
