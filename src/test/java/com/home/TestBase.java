@@ -31,7 +31,7 @@ public class TestBase {
     public String month = faker.options().option("January", "February", "March", "April");
     public String year = String.valueOf(faker.number().numberBetween(1990, 2014));
 
-    public String subjects = faker.options().option("Maths","Accounting", "Arts");
+    public String subjects = faker.options().option("Maths", "Accounting", "Arts");
     public String hobby = faker.options().option("Sports", "Reading", "Music");
     public String currentAddress = faker.address().streetAddress();
     public String uploadPicture = "images/MistakeText.jpg";
@@ -39,16 +39,15 @@ public class TestBase {
     public String city = generatorOfCity(state);
 
 
-
-
     @BeforeAll
     static void setUp() {
 
-       Configuration.browser = System.getProperty("browserType", "chrome");
-       Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-       Configuration.remote = System.getProperty("browserUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-       Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
-       //"https://user1:1234@selenoid.autotests.cloud/wd/hub"
+        Configuration.browser = System.getProperty("browserType", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
+        Configuration.remote = System.getProperty("browserUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
+        Configuration.browserSize = System.getProperty("resolution", "1920x1080");
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -62,11 +61,11 @@ public class TestBase {
     }
 
 
-
     @BeforeEach
     void addListenerAllure() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
